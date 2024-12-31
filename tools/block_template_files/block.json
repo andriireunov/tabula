@@ -1,0 +1,19 @@
+{
+  "name": "acf/$block-slug",
+  "title": "$block-title",
+  "style": [ "file:./style.css"],
+  "script": [],
+  "category": "exf",
+  "icon": "block-default",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "template.php"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "mode": "edit"
+  },
+  "version": "1.0.0"
+}

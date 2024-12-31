@@ -1,0 +1,8 @@
+@forward "tools/reset";
+@forward "layout";
+@use "tools/include-media" as *;
+
+body {
+  font-size: 40px;
+  background-color: tomato;
+}

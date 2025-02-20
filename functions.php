@@ -63,6 +63,13 @@ function tabula_theme_setup()
 			'script',
 		)
 	);
+	add_theme_support( 'custom-logo', array(
+		'height'      => 108,
+		'width'       => 240,
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' ),
+	) );
 }
 
 add_action('after_setup_theme', 'tabula_theme_setup');
@@ -88,15 +95,31 @@ function json_acf_load( $paths ) {
 
 add_filter('acf/settings/show_admin', '__return_false');
 
+/** ======================================================
+*       THEME MODULES
+* ===================================================== */
 
 /**
  * Removes WP RSS feed, jQuery migrate etc.
  */
 require THEME_DIR . "/includes/wp-cleanup.php";
+
+/**
+ * Adds SVG support for Media Library upload
+ */
 require THEME_DIR . "/includes/svg-support.php";
+
+/**
+ * Registers ACF Blocks support. See README for more info
+ */
 require THEME_DIR . '/includes/register-json-blocks.php';
-//
-//function wps_deregister_styles() {
-//	wp_dequeue_style( 'global-styles' );
-//}
-//add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );
+
+/**
+ * Disables Emoji support in comments and content
+ */
+require THEME_DIR . '/includes/ht-disable-emoji.php';
+
+/**
+ * Removes all default Dashboard widgets except 'Site health'
+ */
+require THEME_DIR . '/includes/ht-dashboard-cleanup.php';

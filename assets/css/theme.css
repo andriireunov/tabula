@@ -59,7 +59,36 @@ footer {
   background-color: teal;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 body {
   font-size: 40px;
   background-color: tomato;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+@media (max-width: 1023px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.container.centered {
+  text-align: center;
 }

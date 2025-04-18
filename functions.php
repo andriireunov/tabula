@@ -123,3 +123,19 @@ require THEME_DIR . '/includes/ht-disable-emoji.php';
  * Removes all default Dashboard widgets except 'Site health'
  */
 require THEME_DIR . '/includes/ht-dashboard-cleanup.php';
+
+/**
+ * Adds 'Duplicate post/page' functionality
+ */
+require THEME_DIR . '/includes/ht-post-duplicator.php';
+
+/**
+ * Adds 'ACF Block usage page in Tools admin menu'
+ */
+require THEME_DIR . '/includes/ht-blocks-usage.php';
+
+/**
+ * Adds 'Adds options to Customizer'
+ */
+require THEME_DIR . '/includes/customizer.php';
+

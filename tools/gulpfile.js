@@ -122,4 +122,5 @@ function createNewBlock(done) {
 exports.serve = serve;
 exports.style = style;
 exports.blocksStyles = blocksStyles;
+exports.browserSyncReload = browserSyncReload;
 exports.createNewBlock = createNewBlock;
